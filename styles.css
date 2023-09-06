@@ -1,0 +1,58 @@
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 40%);
+    animation: light-gradient 10s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes light-gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+body.dark-mode {
+    background: linear-gradient(315deg, rgb(63, 1, 59) 3%, rgb(12, 18, 24) 38%, rgb(63, 1, 59) 70%);
+    color: #ffffff;
+    animation: dark-gradient 10s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes dark-gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+body.dark-mode #artCanvas {
+    border-color: #ffffff;
+    background-color: #000000; /* Black background color for canvas in dark mode */
+}
+
+#artCanvas {
+    border: 7px solid #000;
+    background-color: #f0f0f0; /* Light background color for canvas in light mode */
+    display: block;
+    margin: 20px auto;
+    height: 80vh;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+}
